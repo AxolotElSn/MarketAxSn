@@ -1,0 +1,5 @@
+export const ADD_PIZZA = 'cart/addPizza'
+export const DELETE_PIZZA = 'cart/deletePizza'
+export const INCREASE_PIZZA_QUANTITY = 'cart/increasePizzaQuantity'
+export const DECREASE_PIZZA_QUANTITY = 'cart/decreasePizzaQuantity'
+export const CLEAR_CART = 'cart/clearCart'

@@ -13,7 +13,7 @@ export const RadioButtonList: FC<RadioButtonListProps> = ({ fields }) => {
 
   return (
     <div>
-      <Text $fontSize="14px">Вегетерианская</Text>
+      <Text $fontSize="14px">Сезон</Text>
       <S.Container>
         <Controller
           control={control}

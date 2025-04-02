@@ -83,11 +83,6 @@ export const PizzaDetail = () => {
         </S.TextWrapper>
 
         <S.TextWrapper>
-          <span>Ингредиенты: </span>
-          <span>{ingredients}</span>
-        </S.TextWrapper>
-
-        <S.TextWrapper>
           <span>Спецпредложение: </span>
           <span>{isSale ? 'Да' : 'Нет'}</span>
         </S.TextWrapper>
@@ -113,8 +108,8 @@ export const PizzaDetail = () => {
         </S.TextWrapper>
 
         <S.TextWrapper>
-          <span>Вегетерианская: </span>
-          <span>{vegetarian ? 'Да' : 'Нет'}</span>
+          <span>Сезон: </span>
+          <span>{vegetarian ? 'Лето' : 'Зима'}</span>
         </S.TextWrapper>
 
         <S.TextWrapper>
@@ -124,7 +119,7 @@ export const PizzaDetail = () => {
 
         <S.ButtonWrapper>
           <Button onClick={handleClickToPizzaList} $variation="secondary">
-            Вернуться к меню
+            Вернуться к ассортименту
           </Button>
           <Button onClick={handleClickToEdit}>Редактировать</Button>
           <Button onClick={handleClickToDelete} $variation="danger">

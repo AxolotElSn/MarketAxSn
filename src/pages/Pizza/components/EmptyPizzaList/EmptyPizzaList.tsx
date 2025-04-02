@@ -14,7 +14,7 @@ export const EmptyPizzaList = () => {
     <S.Container>
       <S.Wrapper>
         <Text $fontSize={isMobile ? '14px' : '18px'} $color="gray600">
-          Упс! Такой пиццы у нас нет...
+          Такой модели нет .-. 
         </Text>
       </S.Wrapper>
     </S.Container>

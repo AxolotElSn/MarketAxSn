@@ -47,7 +47,7 @@ export const PizzaListPage = () => {
           $variation="primary"
           onClick={handleClick}
         >
-          Создать пиццу
+          Создать модель
         </Button>
       </S.InputWrapper>
 

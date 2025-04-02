@@ -27,7 +27,7 @@ export const Logo = () => {
         $letterSpacing="-1px"
         $lineHeight={isMobile ? '1.25' : '1.5'}
       >
-        Milan Pizza
+        AxelShoes
       </Text>
     </S.Container>
   )

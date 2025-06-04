@@ -43,6 +43,9 @@ export const PizzaDetail = () => {
     vegetarian,
   } = pizza
 
+  // Гарантируем, что size - это массив
+  const sizes = Array.isArray(size) ? size : size ? [size] : []
+
   const { pathEditPizza, pathPizzaList } = routesPaths
   const isLoading = isDeletion || isFetching
 
@@ -100,7 +103,7 @@ export const PizzaDetail = () => {
         <S.TextWrapper>
           <span>Размеры: </span>
           <span>
-            {size.map((el, i, arr) => {
+            {sizes.map((el, i, arr) => {
               const isLastItem = i === arr.length - 1
               return isLastItem ? el : `${el}, `
             })}

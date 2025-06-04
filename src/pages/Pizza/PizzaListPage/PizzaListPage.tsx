@@ -12,6 +12,8 @@ import { Pagination } from '@/pages/Pizza/components/Pagination/Pagination'
 import { PizzaList } from '@/pages/Pizza/components/PizzaList/PizzaList'
 import { selectPizzaList } from '@/store/selectors/pizaListSelectors'
 
+import { CsvExport } from '@/components/CsvExport/CsvExport'  // <-- импорт кнопки экспорта
+
 import * as S from './style'
 
 export const PizzaListPage = () => {
@@ -49,6 +51,8 @@ export const PizzaListPage = () => {
         >
           Создать модель
         </Button>
+        {/* Кнопка экспорта CSV */}
+        <CsvExport />
       </S.InputWrapper>
 
       <PizzaList currentPage={currentPage} inputValue={inputValue} />

@@ -29,7 +29,7 @@ export const CsvImport = () => {
           setMapping({})
         }
       },
-      error: (error, file) => {
+      error: (error) => {
         alert('Ошибка чтения CSV: ' + error.message)
       },
       skipEmptyLines: true,

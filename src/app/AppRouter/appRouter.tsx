@@ -1,3 +1,4 @@
+// src/app/router.ts
 import { createBrowserRouter } from 'react-router-dom'
 
 import { Main } from '@/components/Main/Main'
@@ -6,7 +7,7 @@ import { routesPaths } from '@/consts/routesPaths'
 import { AppLayout } from '@/layout/AppLayout'
 import { Cart } from '@/pages/Cart'
 import { Contacts } from '@/pages/Contacts'
-// import { LoginPage } from '@/pages/Login'
+import { LoginPage } from '@/pages/Login'
 import { PizzaDetail, PizzaEditorWrapper, PizzaListPage } from '@/pages/Pizza'
 
 const {
@@ -30,7 +31,6 @@ export const appRouter = () =>
           </AppLayout>
         </ProtectedRoute>
       ),
-
       children: [
         {
           path: pathPizzaList,
@@ -57,5 +57,9 @@ export const appRouter = () =>
           element: <Contacts />,
         },
       ],
+    },
+    {
+      path: pathLogin,
+      element: <LoginPage />,
     },
   ])

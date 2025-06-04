@@ -1,7 +1,9 @@
+import React from 'react'
 import { RouterProvider } from 'react-router-dom'
-
-import { appRouter } from './AppRouter/appRouter'
+import { appRouter } from './AppRouter/appRouter' // этот файл должен быть создан и корректен
 
 export const App = () => {
-  return <RouterProvider router={appRouter()} />
+  const router = appRouter()
+  return <RouterProvider router={router} />
 }
+

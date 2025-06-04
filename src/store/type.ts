@@ -19,6 +19,8 @@ import {
   SET_PAGES,
 } from './actions/pizzaListActions'
 
+// --- Твои существующие типы ---
+
 export interface InitialStatePizzaList {
   pizzaList: Pizza[]
   isLoading: boolean
@@ -118,3 +120,64 @@ export interface SetPages {
   type: typeof SET_PAGES
   payload: SetPagesPayload
 }
+
+// ===== Новые типы для пользователя (авторизация и регистрация) =====
+
+// Тип пользователя в приложении
+export interface User {
+  id?: number
+  username: string
+  password: string
+}
+
+// Начальное состояние редьюсера user
+export interface InitialStateUser {
+  user: User | null
+  isLoading: boolean
+  errorMessage: string
+}
+
+// Действия для регистрации
+export interface UserRegisterStarted {
+  type: 'user/registerStarted'
+}
+
+export interface UserRegisterSuccess {
+  type: 'user/registerSuccess'
+  payload: User
+}
+
+export interface UserRegisterFailure {
+  type: 'user/registerFailure'
+  payload: string
+}
+
+// Действия для входа
+export interface UserLoginStarted {
+  type: 'user/loginStarted'
+}
+
+export interface UserLoginSuccess {
+  type: 'user/loginSuccess'
+  payload: User
+}
+
+export interface UserLoginFailure {
+  type: 'user/loginFailure'
+  payload: string
+}
+
+// Действие выхода
+export interface UserLogout {
+  type: 'user/logout'
+}
+
+// Общий тип действий для user
+export type ActionUser =
+  | UserRegisterStarted
+  | UserRegisterSuccess
+  | UserRegisterFailure
+  | UserLoginStarted
+  | UserLoginSuccess
+  | UserLoginFailure
+  | UserLogout

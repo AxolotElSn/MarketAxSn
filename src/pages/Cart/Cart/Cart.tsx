@@ -10,10 +10,11 @@ import { selectCart } from '@/store/selectors/cartSelectors'
 import { completeOrder } from '@/store/actions/salesActions'
 import { SaleItem } from '@/store/reducers/salesReducer'
 
-
 import { EmptyCart } from '../components/EmptyCart/EmptyCart'
 import { Item } from '../components/Item/Item'
 import * as S from './style'
+
+import { AdminStatsButton } from '@/components/AdminStatsButton/AdminStatsButton'  // импорт кнопки
 
 export const Cart = () => {
   const cart = useAppSelector(selectCart)
@@ -40,28 +41,37 @@ export const Cart = () => {
 
   const handleClear = () => dispatch(clearCart())
 
-  if (isEmptyCart) return <EmptyCart />
-
   return (
     <S.Container>
       {username && (
-        <Text $fontSize="14px" $color="yellow700">
+        <Text $fontSize="14px" $color="yellow700" style={{ marginBottom: 10 }}>
           {username}, ваш заказ:
         </Text>
       )}
 
-      <S.List>
-        {cart.map((item) => (
-          <Item item={item} key={item.pizza.id} />
-        ))}
-      </S.List>
+      {isEmptyCart ? (
+        <EmptyCart />
+      ) : (
+        <>
+          <S.List>
+            {cart.map((item) => (
+              <Item item={item} key={item.pizza.id} />
+            ))}
+          </S.List>
 
-      <S.ButtonWrapper>
-        <Button onClick={handleClear} $variation="secondary">
-          Очистить
-        </Button>
-        <Button onClick={handleOrder}>Оформить заказ</Button>
-      </S.ButtonWrapper>
+          <S.ButtonWrapper>
+            <Button onClick={handleClear} $variation="secondary">
+              Очистить
+            </Button>
+            <Button onClick={handleOrder}>Оформить заказ</Button>
+          </S.ButtonWrapper>
+        </>
+      )}
+
+
+      <div style={{ marginTop: 20 }}>
+        <AdminStatsButton />
+      </div>
     </S.Container>
   )
 }

@@ -15,6 +15,70 @@
         "36",
         "38"
       ]
+    },
+    {
+      "id": "8ba3",
+      "name": "Кроссовки Nike",
+      "description": "Удобные спортивные кроссовки",
+      "price": 120.5,
+      "size": "42",
+      "image": "nike-shoes.jpg"
+    },
+    {
+      "id": "c133",
+      "name": "Ботинки Timberland",
+      "description": "Прочные ботинки для походов",
+      "price": 150,
+      "size": "44",
+      "image": "timberland.jpg"
+    },
+    {
+      "id": "91eb",
+      "name": "Туфли классические",
+      "description": "Стильные офисные туфли",
+      "price": 80,
+      "size": "43",
+      "image": "classics.jpg"
+    },
+    {
+      "id": "9610",
+      "name": "Сандалии летние",
+      "description": "Легкие сандалии для лета",
+      "price": 45.99,
+      "size": "41",
+      "image": "sandals.jpg"
+    },
+    {
+      "id": "46d8",
+      "name": "Кроссовки Nike",
+      "description": "Удобные спортивные кроссовки",
+      "price": 120.5,
+      "size": "42",
+      "image": "nike-shoes.jpg"
+    },
+    {
+      "id": "5809",
+      "name": "Ботинки Timberland",
+      "description": "Прочные ботинки для походов",
+      "price": 150,
+      "size": "44",
+      "image": "timberland.jpg"
+    },
+    {
+      "id": "9341",
+      "name": "Туфли классические",
+      "description": "Стильные офисные туфли",
+      "price": 80,
+      "size": "43",
+      "image": "classics.jpg"
+    },
+    {
+      "id": "3310",
+      "name": "Сандалии летние",
+      "description": "Легкие сандалии для лета",
+      "price": 45.99,
+      "size": "41",
+      "image": "sandals.jpg"
     }
   ],
   "users": [

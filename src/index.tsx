@@ -7,16 +7,14 @@ import 'react-tooltip/dist/react-tooltip.css'
 
 import { App } from '@/app/App'
 import { GlobalStyles } from '@/app/GlobalStyles/GlobalStyles'
-
 import { store } from './store/store'
-
-import { AppInitializer } from '@/components/AppInitializer/AppInitializer' // <-- импортируем
+import { AppInitializer } from '@/components/AppInitializer/AppInitializer'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <>
     <GlobalStyles />
     <Provider store={store}>
-      <AppInitializer>           {/* <-- оборачиваем здесь */}
+      <AppInitializer>
         <App />
       </AppInitializer>
     </Provider>

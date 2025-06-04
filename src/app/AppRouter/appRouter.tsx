@@ -1,4 +1,3 @@
-// src/app/router.ts
 import { createBrowserRouter } from 'react-router-dom'
 
 import { Main } from '@/components/Main/Main'
@@ -10,6 +9,7 @@ import { Contacts } from '@/pages/Contacts'
 import { LoginPage } from '@/pages/Login'
 import { PizzaDetail, PizzaEditorWrapper, PizzaListPage } from '@/pages/Pizza'
 import { SalesStatsAdmin } from '@/components/SalesStatsAdmin/SalesStatsAdmin'
+import { CsvImport } from '@/components/CsvImport/CsvImport' // <-- импортируем
 
 const {
   pathCreatePizza,
@@ -60,6 +60,10 @@ export const appRouter = () =>
         {
           path: '/stats',
           element: <SalesStatsAdmin />,
+        },
+        {
+          path: '/import',           // <-- новый маршрут для импорта CSV
+          element: <CsvImport />,    // <-- отображаем компонент импорта
         },
       ],
     },

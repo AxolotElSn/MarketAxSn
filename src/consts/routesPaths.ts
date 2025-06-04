@@ -6,4 +6,5 @@ export const routesPaths = {
   pathContacts: '/contacts',
   pathCart: '/cart',
   pathLogin: '/login',
+  pathImport: '/import',   // <-- добавлен путь для импорта CSV
 }

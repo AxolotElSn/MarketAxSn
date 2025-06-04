@@ -10,13 +10,15 @@ import { GlobalStyles } from '@/app/GlobalStyles/GlobalStyles'
 import { store } from './store/store'
 import { AppInitializer } from '@/components/AppInitializer/AppInitializer'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <>
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
+root.render(
+  <React.StrictMode>
     <GlobalStyles />
     <Provider store={store}>
       <AppInitializer>
         <App />
       </AppInitializer>
     </Provider>
-  </>,
+  </React.StrictMode>
 )

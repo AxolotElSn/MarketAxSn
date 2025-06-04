@@ -1,17 +1,18 @@
-import Cookies from 'js-cookie'
+// ProtectedRoute.tsx
 import { FC } from 'react'
 import { Navigate } from 'react-router-dom'
-
+import { useSelector } from 'react-redux'
 import { routesPaths } from '@/consts/routesPaths'
-import { ProtectedRouteProps } from './type'
+import { selectUser, selectUserLoading } from '@/store/selectors/userSelectors'
 
-export const ProtectedRoute: FC<ProtectedRouteProps> = ({ children }) => {
-  const userId = Cookies.get('userId')
+export const ProtectedRoute: FC<{ children: React.ReactNode }> = ({ children }) => {
+  const user = useSelector(selectUser)
+  const isLoading = useSelector(selectUserLoading)
   const { pathLogin } = routesPaths
 
-  if (!userId) {
-    return <Navigate to={pathLogin} replace />
-  }
+  if (isLoading) return <div>Загрузка...</div>
+
+  if (!user) return <Navigate to={pathLogin} replace />
 
   return <>{children}</>
 }

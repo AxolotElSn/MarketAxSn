@@ -9,6 +9,7 @@ import { Cart } from '@/pages/Cart'
 import { Contacts } from '@/pages/Contacts'
 import { LoginPage } from '@/pages/Login'
 import { PizzaDetail, PizzaEditorWrapper, PizzaListPage } from '@/pages/Pizza'
+import { SalesStatsAdmin } from '@/components/SalesStatsAdmin/SalesStatsAdmin'  // <-- импорт
 
 const {
   pathCreatePizza,
@@ -55,6 +56,10 @@ export const appRouter = () =>
         {
           path: pathContacts,
           element: <Contacts />,
+        },
+        {
+          path: '/stats',               // <-- добавленный маршрут
+          element: <SalesStatsAdmin />, // <-- сюда рендерим админ-статистику
         },
       ],
     },

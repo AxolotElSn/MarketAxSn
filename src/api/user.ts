@@ -28,3 +28,14 @@ export const loginUser = async (username: string, password: string): Promise<Use
   })
   return response.data.length > 0 ? response.data[0] : null
 }
+
+// Получение пользователя по ID (для восстановления из куки)
+export const fetchUserById = async (id: string): Promise<User | null> => {
+  try {
+    const response = await axios.get<User>(`${API_URL}/users/${id}`)
+    return response.data
+  } catch (error) {
+    // Если пользователь не найден или ошибка, возвращаем null
+    return null
+  }
+}

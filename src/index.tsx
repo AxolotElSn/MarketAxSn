@@ -10,11 +10,15 @@ import { GlobalStyles } from '@/app/GlobalStyles/GlobalStyles'
 
 import { store } from './store/store'
 
+import { AppInitializer } from '@/components/AppInitializer/AppInitializer' // <-- импортируем
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <>
     <GlobalStyles />
     <Provider store={store}>
-      <App />
+      <AppInitializer>           {/* <-- оборачиваем здесь */}
+        <App />
+      </AppInitializer>
     </Provider>
   </>,
 )
